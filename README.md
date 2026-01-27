@@ -1,14 +1,73 @@
-1-What is JSX, and why is it used?
-Ans: JSX holo html er moto syntax lekhar ekta maddhom. JSX er maddhome REACT e sohojei UI banano jay And etake use kora hoy karon kom code e readable UI bananor jonno.
+CS Ticket System
 
-2-What is the difference between State and Props?
-Ans: State er maddhome compenent er data change kora jay and props ke use kora hoy parent component theke data ke child component e pathate.
+A modern customer ticket management platform designed to streamline issue reporting, tracking, and resolution. The system provides a clear workflow for support teams and a transparent experience for customers.
 
-3-What is the useState hook, and how does it work?
-Ans: useState hook component e state rakhe, useState e 2 ta property thake 1-set mane current value ke rakhe, 2-setCount value change korar function. Jokhon seCount call hoy tokohn component auto render hoy.
+Features
 
-4-How can you share state between components in React?
-Ans: First parent component e state rakbo then props hisabe child component e pathabo.
+Ticket Lifecycle Management
 
-5-How is event handling done in React?
-Ans: React e event handle kora hoy function use kore jemon "onClick".
+Create, view, update, and close tickets
+
+Status tracking: Pending, In Progress, Resolved, Closed, Rejected
+
+Severity levels (Low, Medium, High, Critical)
+
+Dashboard & Analytics
+
+Total tickets
+
+Tickets by status
+
+SLA progress indicators
+
+Productivity metrics for support agents
+
+Authentication & Roles
+
+Customer login
+
+Support agent login
+
+Admin role (optional extension)
+
+JWT-based auth (if implemented)
+
+Communication & Notes
+
+Internal notes for agents
+
+Customer comments
+
+Timeline history
+
+Error States
+
+Bug reports
+
+Ticket reproduction info
+
+Attachments (optional)
+
+Tech Stack
+
+Frontend: React (Vite), React Router, Context/Redux/Zustand (if used), Tailwind UI
+
+Backend (Optional): Node.js (Express), REST API
+
+Auth: JWT (or Firebase/Auth0 if used)
+
+Database: MongoDB/MySQL/Postgres (or mocked with local state)
+
+Deployment: Netlify / Vercel (frontend), Railway / Render (backend)
+
+Workflow
+
+Customer creates a ticket describing an issue
+
+Support team triages and assigns priority
+
+Agent updates progress and resolves or escalates
+
+Customer confirms or reopens
+
+Ticket archived for reporting
