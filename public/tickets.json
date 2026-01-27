@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1001,
+    "title": "Login Bug",
+    "description": "User cannot login with Google",
+    "customer": "John Doe",
+    "priority": "High priority",
+    "status": "Open",
+    "createdAt": "2025-09-25"
+  },
+  {
+    "id": 1002,
+    "title": "Payment Issue",
+    "description": "Payment failed on checkout",
+    "customer": "Alice Smith",
+    "priority": "Medium priority",
+    "status": "Open",
+    "createdAt": "2025-09-24"
+  },
+  {
+    "id": 1003,
+    "title": "UI Glitch",
+    "description": "Button misaligned in dashboard",
+    "customer": "Bob Johnson",
+    "priority": "Low priority",
+    "status": "In- Progress",
+    "createdAt": "2025-09-23"
+  },
+  {
+    "id": 1004,
+    "title": "Profile Update Error",
+    "description": "Error saving profile changes",
+    "customer": "Sara Lee",
+    "priority": "High priority",
+    "status": "Open",
+    "createdAt": "2025-09-22"
+  },
+  {
+    "id": 1005,
+    "title": "Notification Bug",
+    "description": "Email notifications not sent",
+    "customer": "Tom Hanks",
+    "priority": "Medium priority",
+    "status": "In- Progress",
+    "createdAt": "2025-09-21"
+  },
+  {
+    "id": 1006,
+    "title": "Signup Validation",
+    "description": "Signup form validation fails",
+    "customer": "Kate Winslet",
+    "priority": "Low priority",
+    "status": "In- Progress",
+    "createdAt": "2025-09-20"
+  },
+  {
+    "id": 1007,
+    "title": "Search Issue",
+    "description": "Search returns no results",
+    "customer": "Mike Tyson",
+    "priority": "High priority",
+    "status": "Open",
+    "createdAt": "2025-09-19"
+  },
+  {
+    "id": 1008,
+    "title": "Settings Crash",
+    "description": "App crashes on settings page",
+    "customer": "Nina Dobrev",
+    "priority": "Medium priority",
+    "status": "Open",
+    "createdAt": "2025-09-18"
+  },
+  {
+    "id": 1009,
+    "title": "Logout Bug",
+    "description": "User session persists after logout",
+    "customer": "Leo Messi",
+    "priority": "Low priority",
+    "status": "In- Progress",
+    "createdAt": "2025-09-17"
+  },
+  {
+    "id": 1010,
+    "title": "Feedback Submission",
+    "description": "Cannot submit feedback form",
+    "customer": "Eva Green",
+    "priority": "High priority",
+    "status": "Open",
+    "createdAt": "2025-09-16"
+  },
+  {
+    "id": 1011,
+    "title": "Dashboard Lag",
+    "description": "Dashboard loads slowly",
+    "customer": "Chris Evans",
+    "priority": "Medium priority",
+    "status": "Open",
+    "createdAt": "2025-09-15"
+  },
+  {
+    "id": 1012,
+    "title": "Profile Picture",
+    "description": "Profile picture upload fails",
+    "customer": "Scarlett Johansson",
+    "priority": "Low priority",
+    "status": "In- Progress",
+    "createdAt": "2025-09-14"
+  },
+  {
+    "id": 1013,
+    "title": "Password Reset",
+    "description": "Reset link not sent",
+    "customer": "Tom Cruise",
+    "priority": "High priority",
+    "status": "Open",
+    "createdAt": "2025-09-13"
+  },
+  {
+    "id": 1014,
+    "title": "Order History",
+    "description": "Order history page empty",
+    "customer": "Emma Watson",
+    "priority": "Medium priority",
+    "status": "Open",
+    "createdAt": "2025-09-12"
+  }
+]
