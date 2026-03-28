@@ -4,7 +4,6 @@
 @tailwind utilities;
 
 /* DaisyUI plugin */
-@tailwind components;
 @import "daisyui";
 
 /* Custom styles */
@@ -17,9 +16,9 @@ body {
 }
 
 .left-side {
-  background: url(./assets/vector1.png), linear-gradient(to bottom, #422AD5, #6A5AE0);
+  background: url("./assets/vector1.png"), linear-gradient(to bottom, #422AD5, #6A5AE0);
 }
 
 .right-side {
-  background: url(./assets/vector1.png), linear-gradient(to right, #68D391, #276749);
+  background: url("./assets/vector1.png"), linear-gradient(to right, #68D391, #276749);
 }

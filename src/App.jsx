@@ -1,72 +1,80 @@
 import './App.css'
 import { useState, useEffect } from 'react'
-// import Banner from './components/Banner/Banner'
-// import Navbar from './components/Navbar/Navbar'
-// import Card from './components/Card/Card'
-// import Task from './components/Task/Task'
-// import Footer from './components/Footer/Footer'
- import { toast, ToastContainer } from 'react-toastify';
+import Navbar from './components/Navbar/Navbar'
+import Banner from './components/Banner/Banner'
+import Card from './components/Card/Card'
+import Task from './components/Task/Task'
+import Footer from './components/Footer/Footer'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
+  const [tickets, setTickets] = useState([])
   const [tasks, setTasks] = useState([])
   const [resolved, setResolved] = useState([])
-  const [tickets, setTickets] = useState([])
 
   useEffect(() => {
     fetch('/tickets.json')
       .then(res => res.json())
       .then(data => setTickets(data))
+      .catch(err => console.error("Failed to load tickets", err))
   }, [])
 
   const handleCardClick = (ticket) => {
-    if (!tasks.find(t => t.id === ticket.id)) {
+    if (!tasks.find(t => t.id === ticket.id) && !resolved.find(t => t.id === ticket.id)) {
       setTasks([...tasks, ticket])
-      toast(`${ticket.title} - Added to Task Status`)
+      toast(`${ticket.title} added to Task Status`)
     } else {
-      toast(`${ticket.title} already in Task Status`)
+      toast(`${ticket.title} already added`)
     }
   }
 
   const handleComplete = (id) => {
     const completedTask = tasks.find(t => t.id === id)
-    if (completedTask) {
-      setTasks(tasks.filter(t => t.id !== id))              
-      setResolved([...resolved, completedTask])             
-      setTickets(tickets.filter(ticket => ticket.id !== id))
-      toast(`Task "${completedTask.title}" completed!`)
-    }
+    if (!completedTask) return
+    setTasks(tasks.filter(t => t.id !== id))
+    setResolved([...resolved, { ...completedTask, status: 'resolved' }])
+    toast(`Task "${completedTask.title}" completed!`)
   }
 
   return (
     <>
       <Navbar />
-      <Banner 
-        inProgressCount={tasks.length} 
-        resolvedCount={resolved.length} 
-      />
+      <Banner inProgressCount={tasks.length} resolvedCount={resolved.length} />
 
-      <div className='flex flex-col md:flex-row justify-between max-w-[1200px] mx-auto'>
+      <div className="max-w-[1200px] mx-auto px-4 py-8 flex gap-6">
 
-        {/*Left side card section */}
-        <div className='md:col-span-3'>
-          <Card 
-            tickets={tickets} 
-            handleCardClick={handleCardClick} 
-          />
+        {/* Left: Customer Tickets */}
+        <div className="w-3/4">
+          <h2 className="text-2xl font-bold mb-4">Customer Tickets</h2>
+          <div className="grid grid-cols-2 gap-4">
+            <Card tickets={tickets} handleCardClick={handleCardClick} />
+          </div>
         </div>
 
-        {/*Right side task section */}
-        <div className='md:col-span-2'>
-          <Task 
-            tasks={tasks} 
-            resolved={resolved} 
-            handleComplete={handleComplete} 
-          />
+        {/* Right: Task Status */}
+        <div className="w-1/4 flex flex-col gap-6">
+          <h2 className="text-2xl font-bold mb-4">Task Status</h2>
+          <Task tasks={tasks} handleComplete={handleComplete} />
+          <div>
+            <h3 className="font-bold text-lg mb-2">Resolved Tasks</h3>
+            {resolved.length === 0 ? (
+              <p className="text-gray-500">No resolved tasks yet</p>
+            ) : (
+              resolved.map(t => (
+                <div key={t.id} className="p-3 mb-2 rounded shadow bg-green-100">
+                  <h4 className="font-bold">{t.title}</h4>
+                  <p className="text-xs text-gray-600">{t.customer}</p>
+                </div>
+              ))
+            )}
+          </div>
         </div>
+
       </div>
 
       <Footer />
-      <ToastContainer></ToastContainer>
+      <ToastContainer />
     </>
   )
 }
