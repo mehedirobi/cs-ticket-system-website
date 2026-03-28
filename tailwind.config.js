@@ -1,14 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-<<<<<<< HEAD
-export default {
-  content: [],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-
-=======
 import daisyui from "daisyui";
 
 export default {
@@ -16,6 +6,5 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [daisyui], // ✅ MUST
+  plugins: [daisyui], 
 };
->>>>>>> 143f172 (upadted)
