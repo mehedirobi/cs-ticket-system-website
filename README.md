@@ -1,4 +1,4 @@
-# 🎫 CS Ticket System
+# CS Ticket System
 
 A modern customer support ticket management system designed to streamline issue reporting, tracking, and resolution between customers and support teams.
 
