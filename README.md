@@ -1,90 +1,72 @@
-<<<<<<< HEAD
-CS Ticket System
+# 🎫 CS Ticket System
 
-A modern customer ticket management platform designed to streamline issue reporting, tracking, and resolution. The system provides a clear workflow for support teams and a transparent experience for customers.
+A modern customer support ticket management system designed to streamline issue reporting, tracking, and resolution between customers and support teams.
 
-Features
+This system provides a structured workflow for managing tickets efficiently with role-based access and real-time status tracking.
 
-Ticket Lifecycle Management
+---
 
-Create, view, update, and close tickets
+## ✨ Features
 
-Status tracking: Pending, In Progress, Resolved, Closed, Rejected
+### 🎯 Ticket Management
+- Create, view, update, and close tickets
+- Status tracking: Pending, In Progress, Resolved, Closed, Rejected
+- Priority levels: Low, Medium, High, Critical
+- Ticket history and lifecycle tracking
 
-Severity levels (Low, Medium, High, Critical)
+---
 
-Dashboard & Analytics
+### 📊 Dashboard & Analytics
+- Total tickets overview
+- Status-based filtering
+- Performance and progress tracking
+- Support agent workload visibility
 
-Total tickets
+---
 
-Tickets by status
+### 🔐 Authentication & Roles
+- Customer authentication
+- Support agent access
+- Admin role (optional)
+- JWT-based authentication (if implemented)
 
-SLA progress indicators
+---
 
-Productivity metrics for support agents
+### 💬 Communication System
+- Internal notes for support agents
+- Customer comments
+- Ticket timeline history
 
-Authentication & Roles
 
-Customer login
 
-Support agent login
+## 🔄 Workflow
 
-Admin role (optional extension)
+1. Customer creates a support ticket
+2. Ticket is assigned to support agent
+3. Agent updates status and progress
+4. Issue is resolved or escalated
+5. Ticket is closed and archived
 
-JWT-based auth (if implemented)
+---
 
-Communication & Notes
+## 📌 Key Highlights
 
-Internal notes for agents
+- Real-world support system workflow
+- Role-based access control
+- Scalable ticket lifecycle architecture
+- Clean separation of concerns (frontend/backend)
 
-Customer comments
+---
 
-Timeline history
+## 🚀 Future Improvements
 
-Error States
+- Real-time chat system
+- Email notification system
+- SLA automation
+- Advanced analytics dashboard
+- File attachment support
 
-Bug reports
+---
 
-Ticket reproduction info
-
-Attachments (optional)
-
-Tech Stack
-
-Frontend: React (Vite), React Router, Context/Redux/Zustand (if used), Tailwind UI
-
-Backend (Optional): Node.js (Express), REST API
-
-Auth: JWT (or Firebase/Auth0 if used)
-
-Database: MongoDB/MySQL/Postgres (or mocked with local state)
-
-Deployment: Netlify / Vercel (frontend), Railway / Render (backend)
-
-Workflow
-
-Customer creates a ticket describing an issue
-
-Support team triages and assigns priority
-
-Agent updates progress and resolves or escalates
-
-Customer confirms or reopens
-
-Ticket archived for reporting
-=======
-1-What is JSX, and why is it used?
-Ans: JSX holo html er moto syntax lekhar ekta maddhom. JSX er maddhome REACT e sohojei UI banano jay And etake use kora hoy karon kom code e readable UI bananor jonno.
-
-2-What is the difference between State and Props?
-Ans: State er maddhome compenent er data change kora jay and props ke use kora hoy parent component theke data ke child component e pathate.
-
-3-What is the useState hook, and how does it work?
-Ans: useState hook component e state rakhe, useState e 2 ta property thake 1-set mane current value ke rakhe, 2-setCount value change korar function. Jokhon seCount call hoy tokohn component auto render hoy.
-
-4-How can you share state between components in React?
-Ans: First parent component e state rakbo then props hisabe child component e pathabo.
-
-5-How is event handling done in React?
-Ans: React e event handle kora hoy function use kore jemon "onClick".
->>>>>>> 143f172 (upadted)
+## 🔗 Live link
+https://cs-ticket-system-website-01.netlify.app/
